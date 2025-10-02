@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "CalendarCost",
+  "version": "1.0",
+  "description": "Calculates and displays the estimated cost of Google Calendar meetings. VibeCoded with Gemini 2.5 Pro",
+  "icons": {
+    "16": "CalendarCostIcon.png",
+    "32": "CalendarCostIcon.png",
+    "48": "CalendarCostIcon.png",
+    "128": "CalendarCostIcon.png"
+  },
+  "action": {
+    "default_icon": {
+      "16": "CalendarCostIcon.png",
+      "32": "CalendarCostIcon.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://calendar.google.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions": []
+}
